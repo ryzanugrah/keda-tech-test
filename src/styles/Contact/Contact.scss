@@ -1,0 +1,123 @@
+.contact__wrapper {
+    min-height: 80vh;
+    display: flex;
+
+    & > * {
+        flex-basis: 100%;
+        padding: 4em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__wrapper {
+        flex-direction: column;
+
+        & > * {
+            padding: 4em 2em;
+        }
+    }
+}
+
+.message__section h2, .contact__header h2 {
+    font-size: 2.5rem;
+}
+
+.message__section h2 {
+    color: white;
+}
+
+.message__section {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+
+    .message__form {
+        display: flex;
+        flex-direction: column;
+
+        input, textarea {
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            background: transparent;
+
+            margin: 1.5em 0;
+            padding: 0.5em 0.5em;
+
+            color: white;
+            font-size: 1rem;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 20px;
+            padding: .5em 1em;
+            color: #696EDD;
+            margin-top: 2em;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+}
+
+.contact__us {
+    background: #F7F7FD;
+
+    .contact__header p {
+        padding-top: .5em;
+        padding-bottom: 2em;
+        font-size: 1.2rem;
+    }
+
+    .contact__item {
+        display: flex;
+        align-items: center;
+
+        padding-bottom: 3em;
+
+        .item__logo {
+            margin-right: 2em;
+
+            img {
+                width: 25px;
+                height: auto;
+            }
+        }
+
+        .item__detail p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact__item {
+        flex-direction: column;
+
+        .item__logo {
+            margin-right: 0 !important;
+        }
+
+        .item__detail p {
+            text-align: center;
+        }
+    }
+}

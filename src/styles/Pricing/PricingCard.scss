@@ -1,0 +1,133 @@
+.cards__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .cards__wrapper {
+        flex-direction: column;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 350px;
+    height: 420px;
+
+    box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+    border-radius: 20px;
+    padding: 2em;
+
+    background-color: white;
+
+    .card__title {
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+    
+    .card__price {
+        padding: 2em 0;
+    
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    
+    .card__features {
+        h4 {
+            text-align: center;
+        }
+    
+        ul {
+            list-style: none;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li  {
+                padding-top: 1em;
+            }
+    
+            & > *:not(:last-child) {
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    .card__cta {
+        border: 1px solid #6E73DE;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+        width: 100%;
+        padding: 0.5em 0;
+        margin-top: 2.5em;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            color: white;
+        }
+
+        &:hover {
+            background: transparent;
+
+            a {
+                color: #6E73DE;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+        height: 450px;
+
+        .card__title h2, 
+        .card__price h2, 
+        .card__features h4, 
+        .card__features li {
+            color: white;
+
+            span {
+                color: white;
+            }
+        }
+
+        .card__cta {
+            border: 1px solid white;
+            background: white;
+            margin-top: 4.3em;
+    
+            a {
+                color: #6E73DE;
+            }
+
+            &:hover {
+                background: transparent;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card {
+        margin-bottom: 2em;
+    }
+}

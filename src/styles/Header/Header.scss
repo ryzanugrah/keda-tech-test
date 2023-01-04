@@ -1,0 +1,143 @@
+.header__wrapper {
+    min-height: 100vh;
+    width: 100%;
+
+    background: url('../../images/backgrounds/bg-02.png');
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 15vh;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+@media screen and (max-width: 900px) {
+    .header__wrapper{
+        align-items: flex-start;
+        padding-top: 20vh;
+        padding-bottom: 5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__wrapper {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+.header__title, .header__tagline {
+    color: white;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 900px) {
+    .header__tagline {
+        line-height: 2rem;
+    }
+}
+
+.header__title {
+    font-size: 3rem;
+    padding-bottom: .8em;
+}
+
+.header__tagline{
+    font-size: 1.2rem;
+    padding-bottom: 1em;
+}
+
+.header__cta {
+    background-color: white;
+    padding: 0.5em 1em;
+
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+    &:hover{
+        background-color: transparent;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header__cta {
+        margin-top: 1.5em;
+    }
+}
+
+.header__summary {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary__title {
+    width: 60vw;
+    padding-bottom: 1em;
+
+    p {
+        color: white;
+        overflow: hidden;
+        text-align: center;
+
+        &:before,
+        &:after {
+            background-color: white;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+        }
+
+        &:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        &:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+}
+
+.summary__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+        flex: 1 1 2em;
+    }
+
+    .content__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2em;
+        padding-bottom: 2em;
+
+        img {
+            width: 150px;
+            height: auto;
+        }
+
+        p {
+            color: white;
+            padding-top: 1em;
+            text-align: center;
+        }
+    }
+}

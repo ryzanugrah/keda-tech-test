@@ -1,0 +1,22 @@
+.pricing__wrapper {
+    background: #F7F7FD;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .pricing__wrapper {
+        padding-bottom: 5em;
+    }
+}
+
+.pricing__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+
+    padding-bottom: 1em;
+}
+  
