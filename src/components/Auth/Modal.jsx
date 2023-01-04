@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 
 import '../../styles/Auth/Modal.scss';
@@ -14,7 +15,7 @@ const Modal = ({ open, onClose, ...props }) => {
     return function cleanup() {
       document.body.removeEventListener('keydown', closeOnEscapeKeyDown);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={`modal ${open ? 'open' : ''}`} onClick={onClose}>

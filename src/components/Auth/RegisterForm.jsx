@@ -1,23 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 
 import '../../styles/Auth/Form.scss';
-
-// const RegisterForm = ({ setStatus }) => {
-//   return (
-//     <div className='login__form'>
-//       <input type='text' placeholder='Your Name' />
-//       <input type='email' placeholder='Your Email' />
-//       <input type='password' placeholder='Your Password' />
-//       <button>Register</button>
-//       <span className='login__register'>
-//         Want to login instead?{' '}
-//         <a onClick={() => setStatus('login')}>Login here!</a>
-//       </span>
-//     </div>
-//   );
-// };
-
-// export default RegisterForm;
 
 const RegisterForm = ({ onClose, setStatus }) => {
   const [name, setName] = useState('');
