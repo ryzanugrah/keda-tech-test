@@ -1,10 +1,22 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). This project is deployed to Netlify which can be accessed [here](https://chimerical-longma-03626e.netlify.app/).
+
+## Tech Stack and Libraries
+
+ - React JS, a front-end JavaScript library that uses a technique called "single-page application" or SPA. In SPA applications, only certain parts of the page are reloaded when you move to another page, not the entire page. This makes navigating between pages faster and provides a smoother user experience.
+ - SASS (Syntactically Awesome Stylesheets), preprocessor for CSS that adds additional features not available in regular CSS. This allows you to write less code that is cleaner, more modular, and easier to read.
+ - Styled Components, one of the CSS-in-JS that allows combining CSS and JS in the same file. So you don't need to create separate CSS files or keep moving from one file to another.
+ - Framer Motion, a powerful production-ready library from Framer that can create different animation styles in the DOM as elements. Framer Motion is an excellent alternative to making complex CSS animations.
+ - Git, a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Used to install all dependencies or devDependencies from a 'package.json' file.
 
 ### `npm start`
 
