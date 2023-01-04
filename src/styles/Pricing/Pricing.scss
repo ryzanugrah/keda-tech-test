@@ -1,22 +1,116 @@
 .pricing__wrapper {
-    background: #F7F7FD;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+  padding-bottom: 1em;
 }
 
 @media screen and (max-width: 900px) {
-    .pricing__wrapper {
-        padding-bottom: 5em;
+  .pricing__wrapper {
+    margin: 5em 0;
+  }
+}
+
+.cards__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0px 20px 40px rgba(36, 46, 49, 0.185);
+  border-radius: 20px;
+  padding: 2em;
+  margin: 1em;
+
+  background-color: white;
+
+  .card__title {
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
     }
+  }
+
+  .card__price {
+    padding: 2em 0;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .card__features {
+    h4 {
+      text-align: left;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding-top: 1em;
+      }
+
+      & > *:not(:last-child) {
+        padding-bottom: 1em;
+      }
+    }
+  }
 }
 
-.pricing__title {
-    text-align: center;
-    font-weight: 600;
-    font-size: 2rem;
+.card__cta {
+  border: 1px solid #21bff5;
+  border-radius: 20px;
+  background: #21bff5;
+  width: 100%;
+  padding: 1em 0;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  font-weight: 700;
 
-    padding-bottom: 1em;
+  &:hover {
+    background: transparent;
+    color: #21bff5;
+
+    a {
+      color: #21bff5;
+    }
+  }
 }
-  
+
+@media screen and (max-width: 900px) {
+  .cards__wrapper {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

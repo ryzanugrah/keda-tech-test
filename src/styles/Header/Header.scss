@@ -1,143 +1,95 @@
 .header__wrapper {
-    min-height: 100vh;
-    width: 100%;
-
-    background: url('../../images/backgrounds/bg-02.png');
-    background-size: 1000px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 15vh;
-    padding-left: 5em;
-    padding-right: 5em;
+  min-height: 100vh;
+  width: 100%;
+  background: url('../../images/backgrounds/bg-01.png'),
+    url('../../images/backgrounds/bg-02.png');
+  background-size: 400px, 600px;
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15vh;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
-@media screen and (max-width: 900px) {
-    .header__wrapper{
-        align-items: flex-start;
-        padding-top: 20vh;
-        padding-bottom: 5em;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .header__wrapper {
-        padding-left: 3em;
-        padding-right: 3em;
-    }
-}
-
-.header__title, .header__tagline {
-    color: white;
-    font-weight: 300;
-}
-
-@media screen and (max-width: 900px) {
-    .header__tagline {
-        line-height: 2rem;
-    }
+.header__title,
+.header__tagline {
+  color: black;
 }
 
 .header__title {
-    font-size: 3rem;
-    padding-bottom: .8em;
+  display: flex;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.8em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.header__tagline{
-    font-size: 1.2rem;
-    padding-bottom: 1em;
+.header__tagline {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 2em;
 }
 
 .header__cta {
-    background-color: white;
-    padding: 0.5em 1em;
+  font-weight: 600;
+  background-color: #21bff5;
+  color: white;
+  padding: 1em 5em;
+  border: 1px solid #21bff5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 
-    border: 1px solid white;
-    border-radius: 20px;
-    cursor: pointer;
-
-    transition: all .3s ease;
-
-    &:hover{
-        background-color: transparent;
-        color: white;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .header__cta {
-        margin-top: 1.5em;
-    }
+  &:hover {
+    color: #21bff5;
+    background-color: transparent;
+  }
 }
 
 .header__summary {
-    padding-top: 3em;
-    display: flex;
-    flex-direction: column;
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .header__wrapper {
+    min-height: 70vh;
+    width: 100%;
     align-items: center;
+    padding-top: 20vh;
+    padding-bottom: 5em;
+    background: none;
+  }
 }
 
-.summary__title {
-    width: 60vw;
-    padding-bottom: 1em;
-
-    p {
-        color: white;
-        overflow: hidden;
-        text-align: center;
-
-        &:before,
-        &:after {
-            background-color: white;
-            content: "";
-            display: inline-block;
-            height: 1px;
-            position: relative;
-            vertical-align: middle;
-            width: 50%;
-        }
-
-        &:before {
-            right: 0.5em;
-            margin-left: -50%;
-        }
-
-        &:after {
-            left: 0.5em;
-            margin-right: -50%;
-        }
-    }
+@media screen and (max-width: 500px) {
+  .header__wrapper {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
 }
 
-.summary__content {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (max-width: 900px) {
+  .header__cta {
+    margin-top: 1.5em;
+  }
+}
 
-    & > * {
-        flex: 1 1 2em;
-    }
+@media screen and (max-width: 900px) {
+  .header__tagline {
+    line-height: 2rem;
+  }
 
-    .content__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 2em;
-        padding-bottom: 2em;
-
-        img {
-            width: 150px;
-            height: auto;
-        }
-
-        p {
-            color: white;
-            padding-top: 1em;
-            text-align: center;
-        }
-    }
+  .header__title {
+    font-size: 2rem;
+    text-align: center;
+  }
 }

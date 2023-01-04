@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Modal from "./Modal";
-import LoginForm from "./LoginForm";
-import RegisterForm from "./RegisterForm";
+import Modal from '../Auth/Modal';
+import LoginForm from '../Auth/LoginForm';
+import RegisterForm from '../Auth/RegisterForm';
 
-import "../../styles/NavBar/Nav/Nav.scss";
-import logo from "../../images/logo.png";
+import '../../styles/NavBar/Nav.scss';
+import logo from '../../images/logo.png';
 
 const Nav = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [status, setStatus] = useState("login");
+  const [status, setStatus] = useState('login');
 
   return (
     <>
       <div className="navbar">
         <div className="logo__wrapper">
           <img src={logo} alt="Logo" />
-          <a href="#">HOME</a>
+          <a href="#">ERP TECH</a>
         </div>
         <ul className="nav__links">
           <li>
@@ -37,22 +37,22 @@ const Nav = () => {
         <span
           onClick={() => setOpenModal(false)}
           style={{
-            position: "absolute",
-            right: "7%",
-            top: "5%",
-            cursor: "pointer",
+            position: 'absolute',
+            right: '7%',
+            top: '5%',
+            cursor: 'pointer',
           }}
         >
-          <strong style={{ color: "#696EDD" }}>X</strong>
+          <strong style={{ color: '#21BFF5' }}>X</strong>
         </span>
-        {status === "login" ? (
+        {status === 'login' ? (
           <>
-            <h1 style={{ marginBottom: ".5em" }}>Login</h1>
+            <h1 style={{ marginBottom: '.5em' }}>Login</h1>
             <LoginForm setStatus={setStatus} />
           </>
         ) : (
           <>
-            <h1 style={{ marginBottom: ".5em" }}>Register</h1>
+            <h1 style={{ marginBottom: '.5em' }}>Register</h1>
             <RegisterForm setStatus={setStatus} />
           </>
         )}

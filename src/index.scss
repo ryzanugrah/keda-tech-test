@@ -1,18 +1,19 @@
 body,
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
 body {
-  background-color: #f7f7fd;
+  background-color: white;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  color: rgb(50, 50, 50);
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -22,5 +23,5 @@ a {
 
 .container {
   margin: 0 auto;
-  width: min(90%, 70.5rem);
+  width: min(90%, 75rem);
 }

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Nav from "./Nav";
-import NavMobile from "./NavMobile";
+import React, { useState, useEffect } from 'react';
+import Nav from './Nav';
+import NavMobile from './NavMobile';
 
 const NavBar = () => {
   const [isMobile, setMobile] = useState(false);
@@ -20,8 +20,8 @@ const NavBar = () => {
       }
     };
 
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
   }, []);
 
   return <>{isMobile ? <NavMobile /> : <Nav />}</>;

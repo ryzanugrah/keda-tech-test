@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import Menu from "./Menu";
-import Modal from "./Modal";
-import LoginForm from "./LoginForm";
-import RegisterForm from "./RegisterForm";
+import Menu from './Menu';
+import Modal from '../Auth/Modal';
+import LoginForm from '../Auth/LoginForm';
+import RegisterForm from '../Auth/RegisterForm';
 
-import logo from "../../images/logo.png";
+import logo from '../../images/logo.png';
 
 const StyledBurger = styled.button`
   display: flex;
@@ -19,32 +19,35 @@ const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
   &:focus {
     outline: none;
   }
+
   &:hover {
     div:first-child,
     div:nth-child(3) {
-      transform: ${({ open }) => (open ? "" : "scaleX(1)")};
+      transform: ${({ open }) => (open ? '' : 'scaleX(1)')};
     }
   }
+
   div {
     width: 2rem;
     height: 0.15rem;
-    background: ${({ open }) => (open ? "#696edd" : "white")};
+    background: ${({ open }) => (open ? '#21BFF5' : '#21BFF5')};
     transition: all 300ms linear;
     position: relative;
     transform-origin: 1px;
     :first-child {
       transform: ${({ open }) =>
-        open ? "rotate(45deg)" : "rotate(0) scaleX(0.5)"};
+        open ? 'rotate(45deg)' : 'rotate(0) scaleX(0.5)'};
     }
     :nth-child(2) {
-      opacity: ${({ open }) => (open ? "0" : "1")};
+      opacity: ${({ open }) => (open ? '0' : '1')};
     }
     :nth-child(3) {
       transform: ${({ open }) =>
-        open ? "rotate(-45deg)" : "rotate(0) scaleX(0.7)"};
+        open ? 'rotate(-45deg)' : 'rotate(0) scaleX(0.7)'};
     }
   }
 `;
@@ -53,7 +56,7 @@ const NavMobile = () => {
   const [open, setOpen] = useState(false);
 
   const [openModal, setOpenModal] = useState(false);
-  const [status, setStatus] = useState("login");
+  const [status, setStatus] = useState('login');
 
   const toggle = () => {
     setOpen(!open);
@@ -62,8 +65,8 @@ const NavMobile = () => {
   return (
     <div className="navbar">
       <div className="logo__wrapper">
-        <img src={logo} alt="Company Logo" />
-        <a href="#">HOME</a>
+        <img src={logo} alt="Logo" />
+        <a href="#">ERP TECH</a>
       </div>
       <StyledBurger open={open} onClick={toggle}>
         <div></div>
@@ -75,22 +78,22 @@ const NavMobile = () => {
         <span
           onClick={() => setOpenModal(false)}
           style={{
-            position: "absolute",
-            right: "7%",
-            top: "5%",
-            cursor: "pointer",
+            position: 'absolute',
+            right: '7%',
+            top: '5%',
+            cursor: 'pointer',
           }}
         >
-          <strong style={{ color: "#696EDD" }}>X</strong>
+          <strong style={{ color: '#21BFF5' }}>X</strong>
         </span>
-        {status === "login" ? (
+        {status === 'login' ? (
           <>
-            <h1 style={{ marginBottom: ".5em" }}>Login</h1>
+            <h1 style={{ marginBottom: '.5em' }}>Login</h1>
             <LoginForm setStatus={setStatus} />
           </>
         ) : (
           <>
-            <h1 style={{ marginBottom: ".5em" }}>Register</h1>
+            <h1 style={{ marginBottom: '.5em' }}>Register</h1>
             <RegisterForm setStatus={setStatus} />
           </>
         )}

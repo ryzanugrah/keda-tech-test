@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
   position: fixed;
@@ -16,9 +16,8 @@ const StyledMenu = styled.ul`
   align-items: center;
   justify-content: center;
   transition: all 300ms ease;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
-  opacity: ${({ open }) => (open ? "1" : "0")};
-
+  transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-100%)')};
+  opacity: ${({ open }) => (open ? '1' : '0')};
   background-color: #f7f7fd;
   z-index: 9;
 
@@ -30,22 +29,21 @@ const StyledMenu = styled.ul`
     &:last-child {
       a {
         color: white;
-        border: 1px solid #696edd;
+        border: 1px solid #21bff5;
         border-radius: 10px;
-        background-color: #696edd;
+        background-color: #21bff5;
         padding: 0.5em 3em;
-
         transition: all 0.3s ease;
 
         &:hover {
-          color: #696edd;
+          color: #21bff5;
           background-color: transparent;
         }
       }
     }
 
     a {
-      color: #696edd;
+      color: #21bff5;
     }
   }
 `;
